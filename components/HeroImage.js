@@ -7,7 +7,10 @@ const Hero = () => {
     {
       title: (
         <>
-          Selamat Datang <br/> di Website <span className="underline underline-offset-4 decoration-yellow-300">rexivo.id</span>
+          Selamat Datang <br /> di Website{" "}
+          <span className="underline underline-offset-4 decoration-yellow-300">
+            rexivo.id
+          </span>
         </>
       ),
       subtitle: "Jasa Pembuatan Website Profesional",
@@ -17,12 +20,16 @@ const Hero = () => {
     {
       title: (
         <>
-          <span className="underline underline-offset-4 decoration-yellow-300">rexivo.id</span> <br/> Solusi Website untuk Bisnis Anda
+          <span className="underline underline-offset-4 decoration-yellow-300">
+            rexivo.id
+          </span>{" "}
+          <br /> Solusi Website untuk Bisnis Anda
         </>
       ),
-      subtitle:(
+      subtitle: (
         <>
-          Tingkatkan Kehadiran Online <br/> dengan Desain Modern dan Fungsionalitas Lengkap.
+          Tingkatkan Kehadiran Online <br /> dengan Desain Modern dan
+          Fungsionalitas Lengkap.
         </>
       ),
       image:
@@ -31,7 +38,10 @@ const Hero = () => {
     {
       title: (
         <>
-          Wujud Website Impian Anda <br/> Bersama <span className="underline underline-offset-4 decoration-yellow-300">rexivo.id</span>
+          Wujud Website Impian Anda <br /> Bersama{" "}
+          <span className="underline underline-offset-4 decoration-yellow-300">
+            rexivo.id
+          </span>
         </>
       ),
       subtitle: "Cepat, Elegan, Responsif, dan Ramah di Kantong.",
@@ -40,12 +50,11 @@ const Hero = () => {
     },
   ];
 
-  // ✅ pake slider.length bukan images
   const { currentIndex, setCurrentIndex } = useHeroSlider(slider, 5000);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background slider with animation */}
+      {/* Background slider */}
       <div className="absolute inset-0">
         {slider.map((item, index) => (
           <Image
@@ -53,6 +62,7 @@ const Hero = () => {
             src={item.image}
             alt={`Hero Background ${index}`}
             fill
+            priority={index === 0}
             className={`absolute object-cover transition-all duration-1000 ease-in-out transform
               ${
                 currentIndex === index
@@ -62,29 +72,31 @@ const Hero = () => {
             `}
           />
         ))}
-        <div className="absolute inset-0 bg-black/70 bg-opacity-50 z-30" />
+        <div className="absolute inset-0 bg-black/70 z-30" />
       </div>
 
-      {/* Content dynamic with transition */}
-      <div className="relative z-40 flex flex-col items-center justify-center h-full text-center px-4 text-white">
+      {/* Content */}
+      <div className="relative z-40 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8 text-white">
         {slider.map((item, index) => (
           <div
             key={index}
             className={`absolute transition-all duration-700 ease-in-out transform
-              ${currentIndex === index
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8 pointer-events-none"}
+              ${
+                currentIndex === index
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8 pointer-events-none"
+              }
             `}
           >
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 leading-snug sm:leading-tight drop-shadow-lg">
               {item.title}
             </h1>
-            <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto text-center drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-md sm:max-w-xl md:max-w-2xl mx-auto text-center drop-shadow-md">
               {item.subtitle}
             </p>
             <a
               href="#contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-sm sm:text-base md:text-lg"
             >
               Konsultasi Gratis
             </a>
@@ -93,12 +105,12 @@ const Hero = () => {
       </div>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-8 w-full flex justify-center z-50 gap-2">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 w-full flex justify-center z-50 gap-2">
         {slider.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
               currentIndex === index ? "bg-white scale-125" : "bg-gray-400"
             }`}
           />
