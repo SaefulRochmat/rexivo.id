@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X, ExternalLink, Github, Calendar, User, Tag } from 'lucide-react';
 
+
 // Mock data untuk projects
 const projectsData = [
   {

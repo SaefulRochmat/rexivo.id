@@ -3,6 +3,9 @@
 import avatar1 from "@/public/Images/avatar1.png";
 import avatar2 from "@/public/Images/avatar2.png";
 import avatar3 from "@/public/Images/avatar3.png";
+import LaptopSatu from "@/public/Images/LaptopSatu.png";
+import LaptopDua from "@/public/Images/LaptopDua.png";
+import LaptopTiga from "@/public/Images/LaptopTiga.png";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -61,6 +64,7 @@ const heroSlides = [
     title: 'Website Keren untuk Projectmu',
     subtitle: 'Mudah, Cepat, dan Ramah di Kantong — Cocok untuk pelajar & mahasiswa',
     cta: 'Pesan Sekarang',
+    img: LaptopSatu,
     cardData: {
       leftCard: { title: 'Start', subtitle: 'Only for students', gradient: 'from-sky-100 via-blue-50 to-indigo-100' },
       rightCard: { title: 'Fast', subtitle: 'Deployment 1-3 days', bg: 'bg-white/90' },
@@ -71,6 +75,7 @@ const heroSlides = [
     title: 'Portfolio Digital untuk Tugas & Skripsi',
     subtitle: 'Desain responsif, performa cepat, dan dukungan penuh',
     cta: 'Lihat Paket',
+    img: LaptopDua,
     cardData: {
       leftCard: { title: 'Portfolio', subtitle: 'Showcase your work', gradient: 'from-purple-100 via-pink-50 to-rose-100' },
       rightCard: { title: 'Responsive', subtitle: 'Mobile & Desktop', bg: 'bg-gradient-to-br from-white/90 to-purple-50/80' },
@@ -81,6 +86,7 @@ const heroSlides = [
     title: 'Landing Page yang Mengonversi',
     subtitle: 'Optimized for readability, dan mudah dikustom',
     cta: 'Konsultasi Gratis',
+    img: LaptopTiga,
     cardData: {
       leftCard: { title: 'Convert', subtitle: 'High conversion rate', gradient: 'from-green-100 via-emerald-50 to-teal-100' },
       rightCard: { title: 'SEO Ready', subtitle: 'Optimized & Fast', bg: 'bg-gradient-to-br from-white/90 to-green-50/80' },
@@ -162,46 +168,40 @@ export default function CarouselHero() {
           </motion.div>
 
           {/* CARD SIDE */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`cards-${heroIndex}`}
-              variants={containerVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="w-full rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white/20 backdrop-blur-sm p-8"
-            >
-              <div className="grid grid-cols-2 gap-6">
-                <motion.div
-                  variants={variants.leftCard}
-                  className={`h-40 rounded-2xl bg-gradient-to-tr ${slide.cardData.leftCard.gradient} flex items-center justify-center shadow-lg`}
-                >
-                  <div className="text-center">
-                    <div className="font-bold text-xl text-slate-800">{slide.cardData.leftCard.title}</div>
-                    <div className="text-sm text-slate-600 mt-1">{slide.cardData.leftCard.subtitle}</div>
-                  </div>
-                </motion.div>
+<AnimatePresence mode="wait">
+  <motion.div
+    key={`cards-${heroIndex}`}
+    variants={containerVariants}
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    className="w-full rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-white/20 backdrop-blur-sm p-1"
+  >
+    <div className="flex items-center justify-center">
+      <motion.div
+        variants={variants.rightCard}
+        className="w-full max-w-3xl h-[250px] sm:h-[320px] md:h-[400px] lg:h-[500px] flex items-center justify-center"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeInOut" } }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          className="w-full h-full flex items-center justify-center"
+        >
+          <Image
+            src={slide.img} // ambil dari heroSlides
+            alt={slide.title}
+            width={1600}
+            height={1000}
+            quality={100}
+            className="object-contain w-full h-full"
+          />
+        </motion.div>
+      </motion.div>
+    </div>
+  </motion.div>
+</AnimatePresence>
 
-                <motion.div
-                  variants={variants.rightCard}
-                  className={`h-40 rounded-2xl ${slide.cardData.rightCard.bg} flex items-center justify-center shadow-lg`}
-                >
-                  <div className="text-center">
-                    <div className="font-bold text-xl text-slate-800">{slide.cardData.rightCard.title}</div>
-                    <div className="text-sm text-slate-600 mt-1">{slide.cardData.rightCard.subtitle}</div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  variants={variants.bottomCard}
-                  className="col-span-2 mt-6 p-6 rounded-2xl bg-white/90 shadow-lg"
-                >
-                  <div className="text-sm font-semibold text-slate-800">{slide.cardData.bottomCard.title}</div>
-                  <div className="text-sm text-slate-600 mt-3 leading-relaxed">{slide.cardData.bottomCard.description}</div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
         </div>
 
         {/* Hero Indicators dengan Progress Bar */}

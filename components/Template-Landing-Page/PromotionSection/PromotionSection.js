@@ -69,7 +69,7 @@ export default function PromotionSection() {
                     <div 
                       key={index}
                       className={`flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-white to-gray-50 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group ${isVisible ? 'animate-bounce' : ''}`}
-                      style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.6s', animationFillMode: 'both' }}
+                      style={{ animationDelay: `${index * 0.1}s`, animationDuration: '1.5s', animationFillMode: 'both' }}
                     >
                       <div className={`p-2 rounded-lg bg-white shadow-sm group-hover:scale-110 transition-transform duration-300 ${feature.color}`}>
                         <Icon size={24} />
