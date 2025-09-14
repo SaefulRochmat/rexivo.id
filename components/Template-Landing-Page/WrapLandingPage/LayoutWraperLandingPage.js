@@ -2,6 +2,7 @@ import CarouselHero from "../CarouselHero/CarouselHero";
 import { GridBeams } from "@/components/magicui/grid-beams";
 import Navbar from "../NavigationBar/Navbar";
 import MarqueeSection from "../TechMarquee/MarqueeSection";
+import PromotionSection from "../PromotionSection/PromotionSection";
 
 export default function BackgroundGridBeams() {
     return (
@@ -22,17 +23,13 @@ export default function BackgroundGridBeams() {
       <Navbar />
 
       {/*HEROOOO SLIDEEERRR */}
-      <div className="px-2 py-1 mb-12">
-        <div className="h-screen w-full items-center justify-center">
-            <CarouselHero />
-        </div>
-      </div>
+      <CarouselHero />
 
       {/*Technology Section Marquee */}
-      <div className="mb-12 py-1 px-2">
-        <MarqueeSection />
-      </div>
+      <MarqueeSection />
 
+      {/* Device Mockup Section */}
+      <PromotionSection />
 
       </GridBeams>
     </div>

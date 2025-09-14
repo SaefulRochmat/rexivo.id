@@ -28,7 +28,7 @@ const TechCard = ({ img, name }) => {
     <div className="flex flex-col items-center justify-center 
       w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 
       p-2 sm:p-3 md:p-4 
-      rounded-xl border bg-white/45 dark:bg-gray-900 
+      rounded-xl border-t-1 border-b-1 border-yellow-300 bg-white/45 dark:bg-gray-900 
       shadow-md transform hover:scale-105 transition-transform m-2 sm:m-3">
       <Image
         src={img}
@@ -48,21 +48,23 @@ export default function MarqueeSection() {
   const firstRow = technologies.slice(0, Math.ceil(technologies.length / 2));
 
   return (
-    <section className="relative flex w-full flex-col items-center rounded-lg justify-center overflow-hidden py-8 sm:py-10">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-slate-100 text-center">
-        Teknologi yang kami gunakan
-      </h2>
+    <div className="px-1 py-2 my-12">
+        <section className="relative flex w-full flex-col items-center rounded-lg justify-center overflow-hidden py-8 sm:py-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-slate-100 text-center">
+                Teknologi yang Digunakan
+            </h2>
 
-      <Marquee pauseOnHover className="[--duration:20s]">
-        <div className="flex items-center">
-          {firstRow.map((tech) => (
-            <TechCard key={tech.name} {...tech} />
-          ))}
-        </div>
-      </Marquee>
+            <Marquee pauseOnHover className="[--duration:20s]">
+                <div className="flex items-center">
+                {firstRow.map((tech) => (
+                    <TechCard key={tech.name} {...tech} />
+                ))}
+                </div>
+            </Marquee>
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 sm:w-1/4 bg-gradient-to-r from-white/25 dark:from-gray-900" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 sm:w-1/4 bg-gradient-to-l from-white/25 dark:from-gray-900" />
-    </section>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 sm:w-1/4 bg-gradient-to-r from-white/25 dark:from-gray-900" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 sm:w-1/4 bg-gradient-to-l from-white/25 dark:from-gray-900" />
+        </section>
+    </div>
   );
 }

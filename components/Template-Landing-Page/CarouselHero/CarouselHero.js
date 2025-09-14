@@ -94,7 +94,7 @@ export default function CarouselHero() {
   const slide = heroSlides[heroIndex];
 
   return (
-    <main>
+    <div className="px-1 py-2">
       <section className="rounded-lg pt-16 pb-16 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-yellow-50/30"></div>
@@ -225,6 +225,6 @@ export default function CarouselHero() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }
