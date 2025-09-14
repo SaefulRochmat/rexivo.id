@@ -76,7 +76,7 @@ export default function PreviewProject() {
 			{/* Bagian Kiri - Teks */}
 			<div className="md:w-1/2 flex flex-col items-start space-y-6">
 				<h2 className="text-3xl md:text-5xl pt-10 font-extrabold leading-tight underline underline-offset-10 decoration-yellow-300">
-					Our Projects
+					Feedback
 				</h2>
 				<p className="text-base md:text-lg text-justify max-w-md leading-relaxed">
 					Here are some reviews from our users. They love our product and we

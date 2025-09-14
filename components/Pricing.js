@@ -1,20 +1,20 @@
 const Pricing = () => {
 	const data = [
 		{
-			plan: "Student Plan",
-			description: "Ideal for individuals",
+			plan: "Kantong Pelajar",
+			description: "Cocok untuk kantong pelajar",
 			price: "Rp. 500.000",
 			features: ["Feature 1", "Feature 2", "Feature 3"],
 		},
 		{
-			plan: "Business Plan",
-			description: "Perfect for small teams",
-			price: "Rp. 1.000.000",
+			plan: "Bisnis Promosi",
+			description: "Cocok untuk bisnis promosi",
+			price: "Rp. 1.500.000",
 			features: ["Feature A", "Feature B", "Feature C", "Feature D"],
 		},
 		{
-			plan: "Company Plan",
-			description: "Perfect for company",
+			plan: "Kantong Perusahaan",
+			description: "Cocok untuk perusahaan",
 			price: "Rp. 3.500.000",
 			features: [
 				"Feature E",
@@ -27,10 +27,13 @@ const Pricing = () => {
 		},
 	];
 	return (
-		<div className="my-16 flex w-full flex-col items-center gap-8 px-4">
-			<h1 className="text-3xl font-bold">Pricing Plans</h1>
+		<div
+			className="my-16 flex w-full flex-col items-center gap-8 px-2"
+			id="pricing"
+		>
+			<h1 className="text-3xl font-bold">List Harga</h1>
 
-			<div className="flex w-full max-w-5xl flex-col gap-8 md:flex-row">
+			<div className="flex w-full max-w-7xl flex-col gap-10 md:flex-row">
 				{data.map((plan, index) => (
 					<div
 						key={index}
@@ -51,7 +54,7 @@ const Pricing = () => {
 						</ul>
 						<div className="flex-1" />
 						<button className="mt-6 w-full rounded-md border border-transparent bg-[#60B5FF] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#60B5FF]/80 block">
-							Choose Plan
+							Pilih Paket
 						</button>
 					</div>
 				))}

@@ -9,7 +9,7 @@ const Navbar = () => {
 
 	return (
 		<header className="bg-[#60B5FF] text-white fixed w-full z-50 shadow-md">
-			<div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+			<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 				<h1 className="text-2xl font-bold underline underline-offset-3 decoration-yellow-300">
 					rexivo.id
 				</h1>
