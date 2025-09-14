@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, ExternalLink, Github, Calendar, User, Tag } from 'lucide-react';
+import Image from 'next/image';
 
 
 // Mock data untuk projects
@@ -46,7 +47,7 @@ const projectsData = [
     id: 4,
     name: "HealthCare Plus",
     category: "Web Company",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1645684922842-87793d0b25df?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Website untuk klinik kesehatan dengan sistem booking appointment online dan dashboard admin.",
     technologies: ["Angular", "TypeScript", "Firebase", "Bootstrap"],
     demoUrl: "https://healthcare.demo",
@@ -156,11 +157,11 @@ const ProjectGallerySection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            My Projects
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+            Proyek Kami
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
-            {"Discover the innovative solutions I've crafted with cutting-edge technologies"}
+            {"Temukan solusi inovatif yang kita buat dengan teknologi terkini"}
           </p>
         </div>
 
@@ -195,8 +196,10 @@ const ProjectGallerySection = () => {
               <div className="relative overflow-hidden rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl hover:shadow-purple-500/25 transition-all duration-500">
                 {/* Image */}
                 <div className="relative h-48 md:h-52 overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
+                    width={500}
+                    height={500}
                     alt={project.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -295,7 +298,7 @@ const ProjectModal = ({ project, closeModal }) => {
         <div className="p-6 md:p-8">
           {/* Image */}
           <div className="relative h-64 md:h-80 overflow-hidden rounded-2xl mb-6">
-            <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+            <Image src={project.image} width={500} height={500} alt={project.name} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
 
