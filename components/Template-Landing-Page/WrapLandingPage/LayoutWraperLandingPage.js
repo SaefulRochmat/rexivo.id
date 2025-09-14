@@ -3,6 +3,7 @@ import { GridBeams } from "@/components/magicui/grid-beams";
 import Navbar from "../NavigationBar/Navbar";
 import MarqueeSection from "../TechMarquee/MarqueeSection";
 import PromotionSection from "../PromotionSection/PromotionSection";
+import ProjectGallerySection from "../ProjectGallery/ProjectGallerySection";
 
 export default function BackgroundGridBeams() {
     return (
@@ -30,6 +31,9 @@ export default function BackgroundGridBeams() {
 
       {/* Device Mockup Section */}
       <PromotionSection />
+
+      {/*Project Gallery Section */}
+      <ProjectGallerySection />
 
       </GridBeams>
     </div>
