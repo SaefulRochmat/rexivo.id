@@ -4,7 +4,7 @@ import Navbar from "../NavigationBar/Navbar";
 
 export default function BackgroundGridBeams() {
     return (
-    <div className="relative w-full h-screen overflow-hidden rounded-lg border">
+    <div className="relative w-full overflow-hidden">
       <GridBeams
         gridSize={100}
         gridColor="rgba(255, 255, 255, 0.2)"
@@ -21,9 +21,11 @@ export default function BackgroundGridBeams() {
       <Navbar />
 
       {/*HEROOOO SLIDEEERRR */}
-        <div className="flex min-h-screen  items-center justify-center">
+      <div className="px-2 py-1">
+        <div className="h-screen w-full items-center justify-center">
             <CarouselHero />
         </div>
+      </div>
       </GridBeams>
     </div>
     );
