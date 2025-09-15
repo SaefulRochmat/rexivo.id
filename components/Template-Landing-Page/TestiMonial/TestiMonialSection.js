@@ -68,7 +68,7 @@ export function TestimonialSection({ className }) {
     <section className="w-full py-4 bg-gradient-to-br from-slate-500/80 via-transparent to-slate-500/80 rounded-lg">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE: Text */}
-        <div className="space-y-6">
+        <div className="space-y-6 px-4 text-center md:text-start">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100">
             Apa kata mereka?
           </h2>
@@ -76,7 +76,7 @@ export function TestimonialSection({ className }) {
             Testimoni dari pengguna yang sudah merasakan manfaatnya.
             Semua feedback mereka membantu kami untuk terus berkembang.
           </p>
-          <button className="px-6 py-3 bg-slate-800 text-white rounded-xl shadow hover:bg-slate-700 transition">
+          <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-bold rounded-2xl shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-2 hover:scale-110 transition-all duration-300 overflow-hidden">
             Lihat Semua
           </button>
         </div>
