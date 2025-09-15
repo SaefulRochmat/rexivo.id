@@ -4,7 +4,7 @@ import Navbar from "../NavigationBar/Navbar";
 import MarqueeSection from "../TechMarquee/MarqueeSection";
 import PromotionSection from "../PromotionSection/PromotionSection";
 import ProjectGallerySection from "../ProjectGallery/ProjectGallerySection";
-import { TestiMonialSection } from "../TestiMonial/TestiMonialSection";
+import { TestimonialSection } from "../TestiMonial/TestiMonialSection";
 
 export default function BackgroundGridBeams() {
     return (
@@ -37,7 +37,7 @@ export default function BackgroundGridBeams() {
         <ProjectGallerySection />
 
         {/*Project Gallery Section */}
-        <TestiMonialSection />
+        <TestimonialSection />
 
         </GridBeams>
       </div>
