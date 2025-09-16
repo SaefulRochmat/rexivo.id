@@ -50,7 +50,7 @@ export default function MarqueeSection() {
   return (
     <div className="px-1 py-2 my-12">
         <section className="relative flex w-full flex-col items-center rounded-lg justify-center overflow-hidden py-8 sm:py-10">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-slate-100 text-center">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 text-slate-100 text-center">
                 Teknologi yang Digunakan
             </h2>
 

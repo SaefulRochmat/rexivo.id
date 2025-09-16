@@ -1,137 +1,171 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { ScratchToReveal } from "@/components/magicui/scratch-to-reveal";
-import { cn } from "@/lib/utils";
+import { Linkedin, Twitter } from "lucide-react";
 
 const teamMembers = [
   {
+    name: "Adam Renklint",
+    role: "Founder & CEO",
+    image: "/images/avatar1.png",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
+    big: true,
+  },
+  {
     name: "John Doe",
-    role: "Frontend Developer",
-    image: "/images/team1.jpg",
+    role: "CTO",
+    image: "/images/avatar2.png",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
   },
   {
     name: "Jane Smith",
-    role: "UI/UX Designer",
-    image: "/images/team2.jpg",
+    role: "Head of Marketing",
+    image: "/images/avatar3.png",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
   },
   {
-    name: "Michael Lee",
-    role: "Backend Developer",
-    image: "/images/team3.jpg",
+    name: "Michael Brown",
+    role: "Lead Designer",
+    image: "/images/avatar2.png",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
   },
   {
-    name: "Emily Johnson",
-    role: "Project Manager",
-    image: "/images/team4.jpg",
-  },
-  {
-    name: "David Kim",
-    role: "Mobile Developer",
-    image: "/images/team5.jpg",
+    name: "Sarah Johnson",
+    role: "Developer",
+    image: "/images/avatar1.png",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
   },
 ];
 
-const TeamCard = ({ member }) => {
+export default function TeamSection() {
   return (
-    <ScratchToReveal
-      width={280}
-      height={320}
-      minScratchPercentage={65}
-      className={cn(
-        "relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 backdrop-blur-lg",
-        "bg-white/10 shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
-      )}
-      gradientColors={["#A97CF8", "#F38CB8", "#FDCC92"]}
-    >
-      <div className="flex flex-col items-center justify-center h-full w-full p-4">
-        <Image
-          src={member.image}
-          alt={member.name}
-          width={120}
-          height={120}
-          className="rounded-full border-2 border-white/40 object-cover"
-        />
-        <h3 className="mt-4 text-lg font-semibold text-white drop-shadow">
-          {member.name}
-        </h3>
-        <p className="text-sm text-slate-200/90">{member.role}</p>
-      </div>
-    </ScratchToReveal>
-  );
-};
-
-export function TeamSection() {
-  const [current, setCurrent] = useState(0);
-
-  const prevSlide = () =>
-    setCurrent((prev) => (prev === 0 ? teamMembers.length - 1 : prev - 1));
-
-  const nextSlide = () =>
-    setCurrent((prev) => (prev === teamMembers.length - 1 ? 0 : prev + 1));
-
-  return (
-    <section className="w-full py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black relative overflow-hidden">
-      <div className="container mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
-          Kenali <span className="text-purple-400">Tim Kami</span>
+   <div className="px-1 py-2">
+    <section className="max-w-full mx-auto px-4 py-16 bg-gradient-to-br from-cyan-500/40 via-blue-500/30 to-red-500/40 rounded-lg">
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
+          Meet the People Behind{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-400">
+            Our Success
+          </span>
         </h2>
-        <p className="mt-3 text-slate-300 max-w-xl mx-auto">
-          Gosok kartu di bawah untuk mengenal lebih dekat dengan anggota tim
-          luar biasa kami!
+        <p className="text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed">
+          Tim profesional kami yang beragam dan penuh semangat menyatukan pengalaman
+          dan pemikiran inovatif untuk memberikan hasil yang luar biasa bagi klien kami.
         </p>
       </div>
 
-      {/* SLIDER */}
-      <div className="relative flex items-center justify-center">
-        {/* Tombol Prev */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 z-10 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-lg text-white"
-        >
-          ◀
-        </button>
-
-        {/* Slide */}
-        <div className="overflow-hidden w-[300px] sm:w-[350px]">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
-          >
-            {teamMembers.map((member, idx) => (
-              <div key={idx} className="flex-shrink-0 w-[300px] sm:w-[350px]">
-                <TeamCard member={member} />
+      {/* Team Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {/* Large Photo - Founder/CEO */}
+        {teamMembers
+          .filter((member) => member.big)
+          .map((member, index) => (
+            <div
+              key={index}
+              className="relative col-span-1 row-span-2 group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+              
+              {/* Content Overlay */}
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <div className="mb-2">
+                  <span className="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">
+                    Leadership
+                  </span>
+                </div>
+                <h3 className="text-white text-2xl font-bold mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-gray-200 text-base mb-4">{member.role}</p>
+                <div className="flex space-x-3">
+                  <a 
+                    href={member.socials.linkedin} 
+                    target="_blank" 
+                    className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-blue-600 transition-colors duration-200"
+                  >
+                    <Linkedin className="text-white w-5 h-5" />
+                  </a>
+                  <a 
+                    href={member.socials.twitter} 
+                    target="_blank"
+                    className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-sky-500 transition-colors duration-200"
+                  >
+                    <Twitter className="text-white w-5 h-5" />
+                  </a>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          ))}
 
-        {/* Tombol Next */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 z-10 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-lg text-white"
-        >
-          ▶
-        </button>
+        {/* Small Photos - Other Team Members */}
+        {teamMembers
+          .filter((member) => !member.big)
+          .map((member, index) => (
+            <div
+              key={index}
+              className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 aspect-square"
+            >
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={300}
+                height={300}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Content Overlay */}
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                <h3 className="text-white text-lg font-bold mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-gray-200 text-sm mb-3">{member.role}</p>
+                <div className="flex space-x-2">
+                  <a 
+                    href={member.socials.linkedin} 
+                    target="_blank"
+                    className="bg-white/20 backdrop-blur-sm p-1.5 rounded-full hover:bg-blue-600 transition-colors duration-200"
+                  >
+                    <Linkedin className="text-white w-4 h-4" />
+                  </a>
+                  <a 
+                    href={member.socials.twitter} 
+                    target="_blank"
+                    className="bg-white/20 backdrop-blur-sm p-1.5 rounded-full hover:bg-sky-500 transition-colors duration-200"
+                  >
+                    <Twitter className="text-white w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
-
-      {/* Indikator bulat */}
-      <div className="flex justify-center mt-6 gap-2">
-        {teamMembers.map((_, idx) => (
-          <span
-            key={idx}
-            className={cn(
-              "h-3 w-3 rounded-full transition-all duration-300",
-              current === idx ? "bg-purple-400 scale-110" : "bg-gray-400/50"
-            )}
-          />
-        ))}
-      </div>
-
-      {/* efek background animasi */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_30%,rgba(167,139,250,0.2),transparent_70%)]"></div>
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_70%,rgba(253,204,146,0.15),transparent_70%)]"></div>
     </section>
+   </div>
   );
 }

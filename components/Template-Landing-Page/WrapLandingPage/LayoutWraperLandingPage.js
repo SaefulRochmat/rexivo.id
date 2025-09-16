@@ -5,9 +5,12 @@ import MarqueeSection from "../TechMarquee/MarqueeSection";
 import PromotionSection from "../PromotionSection/PromotionSection";
 import ProjectGallerySection from "../ProjectGallery/ProjectGallerySection";
 import { TestimonialSection } from "../TestiMonial/TestiMonialSection";
-import { TeamSection } from "../OurTeams/OurTeams";
+import TeamSection from "../OurTeams/OurTeams";
+import PricingSection from "../PricingSection/PricingSection";
+import ContactSection from "../ContactSection/ContactSection";
+import Footer from "../FooterSection/FooterSection";
 
-export default function BackgroundGridBeams() {
+export default function WraperComponents() {
     return (
       <div className="relative w-full overflow-hidden">
         <GridBeams
@@ -43,6 +46,14 @@ export default function BackgroundGridBeams() {
         {/*Our Teams Section */}
         <TeamSection />
 
+        {/*Pricing Section */}
+        <PricingSection />
+
+        {/*Contact Section */}
+        <ContactSection />
+
+        {/*Footer Section*/}
+        <Footer />
         </GridBeams>
       </div>
     );

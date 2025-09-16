@@ -69,7 +69,7 @@ export function TestimonialSection({ className }) {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE: Text */}
         <div className="space-y-6 px-4 text-center md:text-start">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100">
+          <h2 className="text-3xl md:text-6xl font-bold text-slate-100">
             Apa kata mereka?
           </h2>
           <p className="text-lg text-slate-100">
