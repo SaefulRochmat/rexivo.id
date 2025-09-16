@@ -79,7 +79,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
           <p>© {new Date().getFullYear()} rexivo.id. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Made with ❤️ by Kosan Studio</p>
+          <p className="mt-2 md:mt-0">Made with ❤️ by Kosan Studios</p>
         </div>
       </motion.div>
     </footer>
