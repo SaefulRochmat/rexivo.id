@@ -2,7 +2,6 @@
 
 import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
-
 import Laravel from "../../../public/logos/Laravel-Logo.png";
 import Nextjs from "../../../public/logos/NextJS-logo.png";
 import ReactLogo from "../../../public/logos/React-logo.svg";  

@@ -1,63 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Send, Mail, Phone, MapPin, Clock, MessageCircle, User, Sparkles } from 'lucide-react';
+import { Send, MessageCircle, User, Sparkles } from "lucide-react";
+import { useContactForm } from "@/hooks/forComponentsTemplate/useContactForm";
+import { contactInfo } from "@/constants/forTemplate2/ContactData";
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-  const [focusedField, setFocusedField] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // ⬇️ state buat nyimpen posisi bintang random
-  const [stars, setStars] = useState([]);
-
-  useEffect(() => {
-    // bikin array random cuma di client (fix hydration mismatch)
-    const generated = [...Array(20)].map(() => ({
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      animationDelay: `${Math.random() * 3}s`,
-      animationDuration: `${2 + Math.random() * 3}s`
-    }));
-    setStars(generated);
-  }, []);
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-      alert('Pesan berhasil dikirim! Kami akan segera menghubungi Anda.');
-    }, 2000);
-  };
-
-  const contactInfo = [
-    { icon: Mail, title: 'Email Kami', info: 'hello@rexivo.id', description: 'Kirim email kapan saja' },
-    { icon: Phone, title: 'Telepon', info: '+62 812-3456-7890', description: 'Sen-Jum, 09:00-18:00' },
-    { icon: MapPin, title: 'Alamat', info: 'Bandung, Jawa Barat', description: 'Indonesia' },
-    { icon: Clock, title: 'Jam Kerja', info: '09:00 - 18:00', description: 'Senin - Jumat' }
-  ];
+  const {
+    formData,
+    focusedField,
+    setFocusedField,
+    isSubmitting,
+    stars,
+    handleInputChange,
+    handleSubmit,
+  } = useContactForm();
 
   return (
     <div className="px-1 py-2">
@@ -86,14 +42,14 @@ export default function ContactSection() {
               <span className="text-white font-medium">Mari Berkolaborasi</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-[fadeInUp_1s_ease-out]">
-              Hubungi{' '}
+              Hubungi{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 Kami
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-[fadeInUp_1s_ease-out_0.2s_both]">
-              Siap mewujudkan ide digital Anda? Tim ahli kami menunggu untuk berkolaborasi 
-              dan menciptakan solusi terbaik untuk bisnis Anda.
+              Siap mewujudkan ide digital Anda? Tim ahli kami menunggu untuk
+              berkolaborasi dan menciptakan solusi terbaik untuk bisnis Anda.
             </p>
           </div>
 
@@ -130,8 +86,8 @@ export default function ContactSection() {
 
             {/* Form */}
             <div className="lg:col-span-3">
-              <form 
-                onSubmit={handleSubmit} 
+              <form
+                onSubmit={handleSubmit}
                 className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl animate-[slideInRight_0.8s_ease-out]"
               >
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
@@ -147,11 +103,13 @@ export default function ContactSection() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      onFocus={() => setFocusedField('name')}
-                      onBlur={() => setFocusedField('')}
+                      onFocus={() => setFocusedField("name")}
+                      onBlur={() => setFocusedField("")}
                       placeholder="Masukkan nama lengkap"
                       className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                        focusedField === 'name' ? 'border-purple-400 shadow-lg' : 'border-white/20'
+                        focusedField === "name"
+                          ? "border-purple-400 shadow-lg"
+                          : "border-white/20"
                       }`}
                     />
                     <input
@@ -160,11 +118,13 @@ export default function ContactSection() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      onFocus={() => setFocusedField('email')}
-                      onBlur={() => setFocusedField('')}
+                      onFocus={() => setFocusedField("email")}
+                      onBlur={() => setFocusedField("")}
                       placeholder="nama@email.com"
                       className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                        focusedField === 'email' ? 'border-purple-400 shadow-lg' : 'border-white/20'
+                        focusedField === "email"
+                          ? "border-purple-400 shadow-lg"
+                          : "border-white/20"
                       }`}
                     />
                   </div>
@@ -176,11 +136,13 @@ export default function ContactSection() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      onFocus={() => setFocusedField('phone')}
-                      onBlur={() => setFocusedField('')}
+                      onFocus={() => setFocusedField("phone")}
+                      onBlur={() => setFocusedField("")}
                       placeholder="+62 812-3456-7890"
                       className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                        focusedField === 'phone' ? 'border-purple-400 shadow-lg' : 'border-white/20'
+                        focusedField === "phone"
+                          ? "border-purple-400 shadow-lg"
+                          : "border-white/20"
                       }`}
                     />
                     <select
@@ -207,7 +169,9 @@ export default function ContactSection() {
                     onChange={handleInputChange}
                     placeholder="Ceritakan proyek atau kebutuhan Anda..."
                     className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none ${
-                      focusedField === 'message' ? 'border-purple-400 shadow-lg' : 'border-white/20'
+                      focusedField === "message"
+                        ? "border-purple-400 shadow-lg"
+                        : "border-white/20"
                     }`}
                   />
 
@@ -236,21 +200,6 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-          @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-          }
-        `}</style>
       </section>
     </div>
   );
