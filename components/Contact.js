@@ -43,11 +43,11 @@ const Contact = () => {
 			});
 	}
 	return (
-		<main>
-			<h1 className="text-center lg:text-3xl/tight text-2xl font-bold mb-2 pt-32 pb-5">
+		<main className="max-w-7xl mx-auto">
+			<h1 className="text-center lg:text-3xl/tight text-2xl font-bold mb-2 pb-5">
 				Kontak <span className="font-bold text-sky-400">Kami</span>
 			</h1>
-			<div className="grid md:grid-cols-2 grid-cols-1 gap-0 items-center">
+			<div className="grid grid-cols-1 md:grid-cols-2 items-center">
 				{/* Form */}
 				<div className="kontak pt-2 items-center" id="kontak">
 					<section className="contact">
@@ -84,7 +84,7 @@ const Contact = () => {
 							<button
 								type="submit"
 								disabled={loading}
-								className={`flex px-5 mx-0 py-2 rounded-md text-white font-bold transition-all 
+								className={`flex px-5 mt-3 py-2 rounded-md text-white font-bold transition-all 
                   					${
 															loading
 																? "bg-gray-400 cursor-not-allowed"
@@ -124,11 +124,11 @@ const Contact = () => {
 				</div>
 
 				{/* Maps */}
-				<div className="flex items-center rounded-lg pt-0">
+				<div className="flex items-center rounded-lg pt-0 m-5 md:m-0">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.7401841727963!2d108.2136703981367!3d-6.832862575315615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f2f451bdd07cf%3A0xbe4247edd1a34a4b!2sMajalengka%20University!5e0!3m2!1sen!2sid!4v1757947177546!5m2!1sen!2sid"
 						width="700"
-						height="550"
+						height="565"
 						style={{ border: "0" }}
 						allowFullScreen
 						loading="lazy"
