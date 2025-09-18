@@ -1,6 +1,7 @@
 import { Quicksand } from "next/font/google";
 import "@tabler/icons-webfont/dist/tabler-icons.min.css";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const quicksand = Quicksand({
 	variable: "--font-quicksand",
@@ -15,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${quicksand.variable} antialiased`}>{children}</body>
+			<body className={`${quicksand.variable} antialiased`}>{children} <Analytics /></body>
 		</html>
 	);
 }
