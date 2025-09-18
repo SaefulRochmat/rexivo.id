@@ -1,10 +1,14 @@
 // constants/forTemplate2/teamMembers.js
 
+import Avatar1 from "@/public/Images/avatar1.png"
+import Avatar2 from "@/public/Images/avatar2.png"
+import Avatar3 from "@/public/Images/avatar3.png"
+
 const teamMembers = [
   {
     name: "Adam Renklint",
     role: "Founder & CEO",
-    image: "/images/avatar1.png",
+    image: Avatar1,
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -14,7 +18,7 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "CTO",
-    image: "/images/avatar2.png",
+    image: Avatar2,
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -23,7 +27,7 @@ const teamMembers = [
   {
     name: "Jane Smith",
     role: "Head of Marketing",
-    image: "/images/avatar3.png",
+    image: Avatar3,
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -32,7 +36,7 @@ const teamMembers = [
   {
     name: "Michael Brown",
     role: "Lead Designer",
-    image: "/images/avatar2.png",
+    image: Avatar2,
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -41,7 +45,7 @@ const teamMembers = [
   {
     name: "Sarah Johnson",
     role: "Developer",
-    image: "/images/avatar1.png",
+    image: Avatar1,
     socials: {
       linkedin: "#",
       twitter: "#",

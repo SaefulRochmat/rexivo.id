@@ -1,23 +1,24 @@
-// constants/forTemplate2/testimonials.js
-
+import Avatar1 from "@/public/Images/avatar1.png"
+import Avatar2 from "@/public/Images/avatar2.png"
+import Avatar3 from "@/public/Images/avatar3.png"
 let testimonials = [
   {
     name: "John Doe",
     description: "Magic UI sangat membantu project saya jadi lebih cepat 🚀",
     time: "2 hari lalu",
-    avatar: "/images/avatar1.png",
+    avatar: Avatar1,
   },
   {
     name: "Jane Smith",
     description: "UI komponenya keren banget, gampang dipake 👍",
     time: "5 hari lalu",
-    avatar: "/images/avatar2.png",
+    avatar: Avatar2,
   },
   {
     name: "Michael Lee",
     description: "Sekarang kerjaan desain front-end jadi lebih efisien 🔥",
     time: "1 minggu lalu",
-    avatar: "/images/avatar3.png",
+    avatar: Avatar3,
   },
 ];
 
