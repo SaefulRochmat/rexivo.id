@@ -3,12 +3,15 @@
 import Avatar1 from "@/public/Images/avatar1.png"
 import Avatar2 from "@/public/Images/avatar2.png"
 import Avatar3 from "@/public/Images/avatar3.png"
+import Saeful from "@/public/Images/Saeful.png";
+import Gondes from "@/public/Images/Gondes.png"
+import Pip from "@/public/Images/Pip.png"
 
 const teamMembers = [
   {
-    name: "Adam Renklint",
+    name: "Saeful Rochmat",
     role: "Founder & CEO",
-    image: Avatar1,
+    image: Saeful,
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -16,18 +19,18 @@ const teamMembers = [
     big: true,
   },
   {
-    name: "John Doe",
+    name: "Muhammad Quthbul Alam",
     role: "CTO",
-    image: Avatar2,
+    image: Gondes,
     socials: {
       linkedin: "#",
       twitter: "#",
     },
   },
   {
-    name: "Jane Smith",
+    name: "Apip Rahman Syahidan",
     role: "Head of Marketing",
-    image: Avatar3,
+    image: Pip,
     socials: {
       linkedin: "#",
       twitter: "#",
