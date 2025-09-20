@@ -1,16 +1,14 @@
 // constants/forTemplate2/teamMembers.js
-
-import Avatar1 from "@/public/Images/avatar1.png"
-import Avatar2 from "@/public/Images/avatar2.png"
-import Avatar3 from "@/public/Images/avatar3.png"
 import Saeful from "@/public/Images/Saeful.png";
 import Gondes from "@/public/Images/Gondes.png"
 import Pip from "@/public/Images/Pip.png"
+import Fahmi from "@/public/Images/Fahmi.png"
+import Arsy from "@/public/Images/Arsy.png"
 
 const teamMembers = [
   {
     name: "Saeful Rochmat",
-    role: "Founder & CEO",
+    role: "Front-End Developer.",
     image: Saeful,
     socials: {
       linkedin: "#",
@@ -20,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Muhammad Quthbul Alam",
-    role: "CTO",
+    role: "Website Designer.",
     image: Gondes,
     socials: {
       linkedin: "#",
@@ -29,7 +27,7 @@ const teamMembers = [
   },
   {
     name: "Apip Rahman Syahidan",
-    role: "Head of Marketing",
+    role: "Back-End Developer.",
     image: Pip,
     socials: {
       linkedin: "#",
@@ -37,18 +35,18 @@ const teamMembers = [
     },
   },
   {
-    name: "Michael Brown",
-    role: "Lead Designer",
-    image: Avatar2,
+    name: "Muhammad Fahmi Ajiz",
+    role: "DevOps Engineer.",
+    image: Fahmi,
     socials: {
       linkedin: "#",
       twitter: "#",
     },
   },
   {
-    name: "Sarah Johnson",
-    role: "Developer",
-    image: Avatar1,
+    name: "Mohammad Nushayr Arsyziyad",
+    role: "Head of Marketing.",
+    image: Arsy,
     socials: {
       linkedin: "#",
       twitter: "#",

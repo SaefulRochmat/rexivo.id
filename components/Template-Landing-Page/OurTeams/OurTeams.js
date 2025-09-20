@@ -48,11 +48,6 @@ export default function TeamSection() {
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col items-start justify-end p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                  <div className="mb-2">
-                    <span className="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">
-                      Leadership
-                    </span>
-                  </div>
                   <h3 className="text-white text-2xl font-bold mb-1">
                     {member.name}
                   </h3>
