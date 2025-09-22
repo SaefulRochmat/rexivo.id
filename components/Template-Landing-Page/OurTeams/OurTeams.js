@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import { useTeamMembers } from "@/hooks/forComponentsTemplate/useTeamMembers";
 
 export default function TeamSection() {
   const teamMembers = useTeamMembers();
 
   return (
-    <div className="px-1 py-2">
+    <div id="OurTeams" className="px-1 py-2">
       <section className="max-w-full mx-auto px-4 py-16 bg-gradient-to-br from-cyan-500/40 via-blue-500/30 to-red-500/40 rounded-lg">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -61,11 +61,11 @@ export default function TeamSection() {
                       <Linkedin className="text-white w-5 h-5" />
                     </a>
                     <a
-                      href={member.socials.twitter}
+                      href={member.socials.instagram}
                       target="_blank"
                       className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-sky-500 transition-colors duration-200"
                     >
-                      <Twitter className="text-white w-5 h-5" />
+                      <Instagram className="text-white w-5 h-5" />
                     </a>
                   </div>
                 </div>
@@ -106,11 +106,11 @@ export default function TeamSection() {
                       <Linkedin className="text-white w-4 h-4" />
                     </a>
                     <a
-                      href={member.socials.twitter}
+                      href={member.socials.instagram}
                       target="_blank"
                       className="bg-white/20 backdrop-blur-sm p-1.5 rounded-full hover:bg-sky-500 transition-colors duration-200"
                     >
-                      <Twitter className="text-white w-4 h-4" />
+                      <Instagram className="text-white w-4 h-4" />
                     </a>
                   </div>
                 </div>

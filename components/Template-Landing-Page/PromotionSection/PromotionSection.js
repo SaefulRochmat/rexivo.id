@@ -9,7 +9,7 @@ export default function PromotionSection() {
   const { isVisible, currentImageIndex } = usePromotionSection(mockupImages.length);
 
   return (
-    <div className='px-1 py-2 mt-8'>
+    <div id="Services" className='px-1 py-2 mt-8'>
       <div className="min-h-screen bg-gradient-to-br rounded-lg from-slate-50/30 via-transparent to-cyan-500/35 py-8 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

@@ -33,25 +33,25 @@ export default function Footer() {
               href="#"
               className="hover:text-white transition-colors duration-300"
             >
-              Tentang Kami
+              About Us
             </a>
             <a
-              href="#"
+              href="#Services"
               className="hover:text-white transition-colors duration-300"
             >
-              Layanan
+              Services
             </a>
             <a
-              href="#"
+              href="#Projects"
               className="hover:text-white transition-colors duration-300"
             >
-              Proyek
+              Projects
             </a>
             <a
-              href="#"
+              href="#contact"
               className="hover:text-white transition-colors duration-300"
             >
-              Kontak
+              Contact
             </a>
           </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
               { icon: Facebook, link: "#" },
               { icon: Twitter, link: "#" },
               { icon: Linkedin, link: "#" },
-              { icon: Instagram, link: "#" },
+              { icon: Instagram, link: "https://instagram.com/rexivo.id" },
             ].map((social, index) => (
               <motion.a
                 key={index}

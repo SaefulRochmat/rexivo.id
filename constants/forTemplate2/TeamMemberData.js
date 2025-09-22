@@ -11,8 +11,8 @@ const teamMembers = [
     role: "Front-End Developer.",
     image: Saeful,
     socials: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/saeful-rochmat-1a4a23309",
+      instagram: "https://instagram.com/rochmat.saeful",
     },
     big: true,
   },
@@ -21,8 +21,8 @@ const teamMembers = [
     role: "Website Designer.",
     image: Gondes,
     socials: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/muhhttps://www.linkedin.com/in/muhammad-quthbul-alam-a46933283 ",
+      instagram: "https://www.instagram.com/mochansr_",
     },
   },
   {
@@ -30,8 +30,8 @@ const teamMembers = [
     role: "Back-End Developer.",
     image: Pip,
     socials: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/apip-rahman-syahidan-141b25288",
+      instagram: "https://www.instagram.com/pipsyrs_",
     },
   },
   {
@@ -39,8 +39,8 @@ const teamMembers = [
     role: "DevOps Engineer.",
     image: Fahmi,
     socials: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/muhammad-fahmi-ajiz",
+      instagram: "https://www.instagram.com/fahmiajiz17",
     },
   },
   {
@@ -48,8 +48,8 @@ const teamMembers = [
     role: "Head of Marketing.",
     image: Arsy,
     socials: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/mohammad-nushayr-arsyziyad-97b186296",
+      instagram: "https://www.instagram.com/zyaciiio_",
     },
   },
 ];

@@ -18,7 +18,7 @@ const ProjectGallerySection = () => {
   } = useProjectsGallery();
 
   return (
-    <div className='px-1 py-2'> 
+    <div id="Projects" className='px-1 py-2'> 
       <div className="min-h-screen bg-gradient-to-br rounded-lg from-slate-900/50 via-purple-900/40 to-slate-900 py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

@@ -16,7 +16,7 @@ export default function ContactSection() {
   } = useContactForm();
 
   return (
-    <div className="px-1 py-2">
+    <div id="contact" className="px-1 py-2">
       <section className="relative min-h-screen rounded-lg py-20 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -150,13 +150,13 @@ export default function ContactSection() {
                       required
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-400 border-white/20"
+                      className="w-full px-4 py-3 bg-white/10 border rounded-xl text-white/30 focus:outline-none focus:ring-2 focus:ring-purple-400 border-white/20"
                     >
-                      <option value="">Pilih subjek</option>
-                      <option value="website">Pembuatan Website</option>
-                      <option value="consultation">Konsultasi Gratis</option>
-                      <option value="maintenance">Maintenance Website</option>
-                      <option value="other">Lainnya</option>
+                      <option value="" className="text-black">Pilih subjek</option>
+                      <option value="website" className="text-black">Pembuatan Website</option>
+                      <option value="consultation" className="text-black">Konsultasi Gratis</option>
+                      <option value="maintenance" className="text-black">Maintenance Website</option>
+                      <option value="other" className="text-black">Lainnya</option>
                     </select>
                   </div>
 

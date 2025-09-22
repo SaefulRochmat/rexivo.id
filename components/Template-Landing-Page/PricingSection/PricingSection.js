@@ -14,7 +14,7 @@ export default function PricingSection() {
 	} = usePricingSection();
 
 	return (
-		<div className="px-1 py-2">
+		<div id="pricing" className="px-1 py-2">
 			<section className="py-20 bg-gradient-to-br from-red-400/50 via-green-400/30 to-blue-400/50 relative rounded-lg overflow-hidden">
 				{/* Background Decorations */}
 				<div className="absolute inset-0 overflow-hidden">

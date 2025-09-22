@@ -9,6 +9,7 @@ import TeamSection from "../OurTeams/OurTeams";
 import PricingSection from "../PricingSection/PricingSection";
 import ContactSection from "../ContactSection/ContactSection";
 import Footer from "../FooterSection/FooterSection";
+import WAWidget from "../WhatsappChatWidget/WhatsappChatWidget"
 
 export default function WraperComponents() {
     return (
@@ -54,6 +55,9 @@ export default function WraperComponents() {
 
         {/*Footer Section*/}
         <Footer />
+
+        {/*Whatsapp Widget */}
+        <WAWidget />
         </GridBeams>
       </div>
     );

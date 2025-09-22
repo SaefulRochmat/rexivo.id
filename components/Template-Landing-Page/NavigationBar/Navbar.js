@@ -4,12 +4,15 @@ import useToggle from "@/hooks/forComponentsTemplate/useToggleNavbar";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 export default function Navbar() {
 	const { open: mobileNavOpen, setOpen: setMobileNavOpen } = useToggle(false);
 
 	const navItems = [
-		{ name: "Services", href: "#services" },
-		{ name: "Projects", href: "#projects" },
+		{ name: "Home", href: "#"},
+		{ name: "Services", href: "#Services" },
+		{ name: "Projects", href: "#Projects" },
+		{ name: "Our Teams", href: "#OurTeams"},
 		{ name: "Pricing", href: "#pricing" },
 		{ name: "Contact", href: "#contact" },
 	];
