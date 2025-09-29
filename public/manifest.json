@@ -1,0 +1,42 @@
+{
+  "name": "Rexivo.id - Jasa Pembuatan Website Profesional",
+  "short_name": "Rexivo.id",
+  "description": "Jasa pembuatan website profesional dengan harga terjangkau untuk bisnis, perusahaan, dan personal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "web development"],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "platform": "wide",
+      "label": "Halaman Utama Rexivo.id"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

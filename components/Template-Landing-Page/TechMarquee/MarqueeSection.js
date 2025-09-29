@@ -33,7 +33,8 @@ const TechCard = ({ img, name }) => {
         src={img}
         width={56}
         height={56}
-        alt={name}
+        alt={`Logo teknologi ${name} yang kami gunakan dalam pengembangan website`}
+        title={`Teknologi ${name}`}
         className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain"
       />
       <p className="mt-1 text-xs sm:text-sm font-medium text-gray-100 dark:text-gray-100 text-center">

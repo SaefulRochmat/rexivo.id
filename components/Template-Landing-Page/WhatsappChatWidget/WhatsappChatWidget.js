@@ -1,7 +1,8 @@
 'use client';
 import { useWhatsappChat } from "@/hooks/forComponentsTemplate/useWhatsappChat";
+import { FaWhatsapp } from "react-icons/fa";
 
-const whatsappNumber = "6281234567890"; // Ganti dengan nomor WhatsApp tujuan
+const whatsappNumber = "6281223487355"; // Ganti dengan nomor WhatsApp tujuan
 
 export default function WhatsappChatWidget() {
   const {
@@ -24,13 +25,20 @@ export default function WhatsappChatWidget() {
           right: 24,
           zIndex: 9999,
           cursor: "pointer",
+          background: "#25D366",
+          borderRadius: "50%",
+          width: 56,
+          height: 56,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.18)",
+          transition: "transform 0.2s",
         }}
         onClick={handleToggle}
+        aria-label="Buka chat WhatsApp"
       >
-        <svg width={56} height={56} viewBox="0 0 56 56" fill="none">
-          <circle cx="28" cy="28" r="28" fill="#25D366" />
-          <path d="M39.6 33.6c-.6-.3-3.6-1.8-4.2-2.1-.6-.3-1.2-.3-1.8.3-.6.6-1.2 1.2-1.5 1.5-.3.3-.6.3-1.2 0-3.3-1.5-5.7-5.1-6-5.4-.3-.3-.3-.6 0-.9.3-.3.6-.9.9-1.2.3-.3.3-.6.6-.9.3-.3.3-.6 0-.9-.3-.3-1.8-4.2-2.1-4.8-.3-.6-.6-.6-1.2-.6h-1.2c-.3 0-.9.3-1.2.6-.9.9-1.5 2.1-1.5 3.3 0 1.2.3 2.4.9 3.6 1.2 2.1 3.3 4.5 6.3 6 .9.3 1.8.6 2.7.6 1.2 0 2.1-.3 3-.9.6-.3 1.2-.9 1.5-1.2.3-.3.3-.6.3-.9v-1.2c0-.6 0-.9-.6-1.2z" fill="#fff"/>
-        </svg>
+        <FaWhatsapp size={32} color="#fff" />
       </div>
 
       {/* Chat Window */}
@@ -40,50 +48,79 @@ export default function WhatsappChatWidget() {
             position: "fixed",
             bottom: 90,
             right: 24,
-            width: 320,
-            background: "#fff",
-            borderRadius: 12,
-            boxShadow: "0 4px 24px rgba(0,0,0,0.15)",
+            width: 340,
+            maxWidth: "95vw",
+            background: "#f0f0f0",
+            borderRadius: 16,
+            boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
             zIndex: 10000,
             overflow: "hidden",
             display: "flex",
             flexDirection: "column",
+            border: "1.5px solid #e0e0e0",
           }}
         >
-          <div style={{ background: "#25D366", color: "#fff", padding: 16, fontWeight: "bold" }}>
-            Chat WhatsApp
+          {/* Header */}
+          <div style={{
+            background: "linear-gradient(90deg, #075e54 0%, #25d366 100%)",
+            color: "#fff",
+            padding: "14px 16px 12px 16px",
+            fontWeight: 600,
+            fontSize: 17,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            borderBottom: "1.5px solid #25d366",
+          }}>
+            <span style={{display: "flex", alignItems: "center", gap: 8}}>
+              <FaWhatsapp size={22} style={{marginRight: 4}} />
+              Chat WhatsApp
+            </span>
             <button
               onClick={handleToggle}
               style={{
-                float: "right",
                 background: "transparent",
                 border: "none",
                 color: "#fff",
-                fontSize: 18,
+                fontSize: 22,
                 cursor: "pointer",
+                lineHeight: 1,
+                marginLeft: 8,
               }}
               aria-label="Tutup"
             >
               ×
             </button>
           </div>
-          <div style={{ flex: 1, padding: 16, maxHeight: 260, overflowY: "auto" }}>
+          {/* Chat Body */}
+          <div style={{
+            flex: 1,
+            padding: 12,
+            maxHeight: 320,
+            overflowY: "auto",
+            background: "#ece5dd",
+            display: "flex",
+            flexDirection: "column",
+            gap: 6,
+          }}>
             {messages.map((msg, idx) => (
               <div
                 key={idx}
                 style={{
-                  marginBottom: 8,
-                  textAlign: msg.from === "user" ? "right" : "left",
+                  display: "flex",
+                  justifyContent: msg.from === "user" ? "flex-end" : "flex-start",
                 }}
               >
                 <span
                   style={{
-                    display: "inline-block",
-                    background: msg.from === "user" ? "#dcf8c6" : "#f0f0f0",
+                    background: msg.from === "user" ? "#dcf8c6" : "#fff",
                     color: "#222",
-                    borderRadius: 8,
-                    padding: "6px 12px",
+                    borderRadius: msg.from === "user" ? "12px 12px 4px 12px" : "12px 12px 12px 4px",
+                    padding: "8px 13px",
+                    fontSize: 15,
+                    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
                     maxWidth: "80%",
+                    wordBreak: "break-word",
                   }}
                 >
                   {msg.text}
@@ -91,7 +128,15 @@ export default function WhatsappChatWidget() {
               </div>
             ))}
           </div>
-          <div style={{ display: "flex", borderTop: "1px solid #eee", padding: 8 }}>
+          {/* Input Area */}
+          <div style={{
+            display: "flex",
+            borderTop: "1.5px solid #e0e0e0",
+            padding: 8,
+            background: "#f7f7f7",
+            alignItems: "center",
+            gap: 8,
+          }}>
             <input
               type="text"
               value={input}
@@ -100,10 +145,12 @@ export default function WhatsappChatWidget() {
               placeholder="Ketik pesan..."
               style={{
                 flex: 1,
-                border: "none",
+                border: "1.5px solid #e0e0e0",
                 outline: "none",
-                padding: 8,
-                fontSize: 14,
+                padding: "8px 12px",
+                fontSize: 15,
+                borderRadius: 8,
+                background: "#fff",
               }}
             />
             <button
@@ -112,15 +159,19 @@ export default function WhatsappChatWidget() {
                 background: "#25D366",
                 color: "#fff",
                 border: "none",
-                borderRadius: 6,
-                padding: "0 16px",
-                marginLeft: 8,
+                borderRadius: 8,
+                padding: "8px 18px",
+                fontWeight: 600,
+                fontSize: 15,
                 cursor: "pointer",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+                transition: "background 0.2s",
               }}
             >
               Kirim
             </button>
           </div>
+          {/* Continue to WhatsApp */}
           <button
             onClick={handleContinueToWhatsapp}
             style={{
@@ -128,14 +179,29 @@ export default function WhatsappChatWidget() {
               color: "#fff",
               border: "none",
               borderRadius: 0,
-              padding: 12,
+              padding: 13,
               width: "100%",
-              fontWeight: "bold",
+              fontWeight: 600,
+              fontSize: 16,
               cursor: "pointer",
+              letterSpacing: 0.2,
+              borderTop: "1.5px solid #25d366",
             }}
           >
             Lanjutkan ke WhatsApp
           </button>
+          {/* Responsive style */}
+          <style>{`
+            @media (max-width: 600px) {
+              .whatsapp-chat-widget {
+                right: 8px !important;
+                bottom: 8px !important;
+                width: 98vw !important;
+                max-width: 98vw !important;
+                border-radius: 0 !important;
+              }
+            }
+          `}</style>
         </div>
       )}
     </>

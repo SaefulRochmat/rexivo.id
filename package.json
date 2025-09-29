@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.5.4",
     "@tabler/icons-webfont": "^3.34.1",
     "@vercel/analytics": "^1.5.0",
     "axios": "^1.12.2",
@@ -17,9 +19,13 @@
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "next": "15.5.3",
+    "next-seo": "^6.8.0",
+    "next-sitemap": "^4.2.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
     "sass": "^1.92.1",
+    "schema-dts": "^1.1.5",
     "sweetalert2": "^11.23.0",
     "tailwind-merge": "^3.3.1"
   },

@@ -37,7 +37,8 @@ export default function TeamSection() {
               >
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} di Rexivo.id`}
+                  title={`${member.name} - ${member.role}`}
                   width={600}
                   height={600}
                   priority // ✅ Pastikan cepat dimuat → kandidat LCP
@@ -82,7 +83,8 @@ export default function TeamSection() {
               >
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} di Tim Rexivo.id`}
+                  title={`${member.name} - ${member.role}`}
                   width={300}
                   height={300}
                   loading="lazy" // ✅ Gambar kecil jangan blok LCP

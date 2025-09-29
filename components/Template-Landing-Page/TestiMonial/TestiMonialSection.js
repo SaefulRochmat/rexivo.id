@@ -19,7 +19,8 @@ const TestimonialCard = ({ name, description, avatar, time }) => {
         <div className="flex-shrink-0">
           <Image
             src={avatar}
-            alt={name}
+            alt={`Foto profil ${name} - Testimoni klien Rexivo.id`}
+            title={`Testimoni dari ${name}`}
             width={40}
             height={40}
             className="rounded-full object-cover"

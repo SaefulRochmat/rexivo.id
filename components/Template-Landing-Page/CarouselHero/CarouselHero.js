@@ -86,7 +86,8 @@ export default function CarouselHero() {
                   <Image
                     key={idx}
                     src={img}
-                    alt="user"
+                    alt={`Pengguna ${idx + 1} yang mempercayai Rexivo.id`}
+                    title={`Pengguna ${idx + 1}`}
                     width={48}
                     height={48}
                     quality={60}
@@ -122,7 +123,8 @@ export default function CarouselHero() {
                   >
                     <Image
                       src={slide.img}
-                      alt={slide.title}
+                      alt={`${slide.title} - ${slide.subtitle}`}
+                      title={slide.title}
                       width={500}
                       height={500}
                       quality={75}
