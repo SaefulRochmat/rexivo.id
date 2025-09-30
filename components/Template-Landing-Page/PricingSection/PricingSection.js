@@ -102,7 +102,7 @@ export default function PricingSection() {
 									)}
 
 									<div
-										className={`relative bg-white rounded-2xl p-8 shadow-xl transition-all duration-500 border-2 h-full
+										className={`relative flex flex-col bg-white rounded-2xl p-8 shadow-xl transition-all duration-500 border-2 h-full
                     ${
 											plan.popular
 												? "border-purple-200 shadow-purple-100"
@@ -176,17 +176,19 @@ export default function PricingSection() {
 										</div>
 
 										{/* CTA Button */}
-										<button
-											className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 group/btn
+										<div className="mt-auto">
+											<button
+												className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 group/btn
                       ${
-												plan.popular
-													? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl"
-													: "bg-gray-900 hover:bg-black text-white"
-											}`}
-										>
-											<span>{plan.buttonText}</span>
-											<ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-										</button>
+								plan.popular
+									? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl"
+									: "bg-gray-900 hover:bg-black text-white"
+							}`}
+											>
+												<span>{plan.buttonText}</span>
+												<ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+											</button>
+										</div>
 									</div>
 								</div>
 							);
