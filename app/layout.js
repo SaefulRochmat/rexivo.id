@@ -56,7 +56,7 @@ export const metadata = {
 		creator: '@rexivoid',
 	},
 	verification: {
-		google: 'your-google-verification-code',
+		google: '_WFtH7M3FEJS9o27cgrLdjq-o_f48f_LEdcjtI-sPz8',
 		yandex: 'your-yandex-verification-code',
 		yahoo: 'your-yahoo-verification-code',
 	},
