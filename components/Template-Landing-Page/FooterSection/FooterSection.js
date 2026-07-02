@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 blur-3xl opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-sky-500/20 via-violet-500/20 to-pink-500/20 blur-3xl opacity-40"></div>
 
       {/* Glassmorphism Container */}
       <motion.div
@@ -15,20 +15,20 @@ export default function Footer() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-10 max-w-full mx-auto px-6 py-12 rounded-t-xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg"
+        className="relative z-10 max-w-full mx-auto px-6 py-12 rounded-t-3xl bg-slate-950/80 backdrop-blur-xl border border-slate-800 shadow-[0_-10px_40px_rgba(2,6,23,0.35)]"
       >
         {/* Content */}
         <div className="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
           {/* Brand */}
           <div>
-            <h2 className="text-4xl font-bold text-white underline underline-offset-4 decoration-yellow-300">rexivo.id</h2>
-            <p className="text-gray-200 mt-2">
+            <h2 className="text-4xl font-bold text-slate-100 underline underline-offset-4 decoration-sky-400">rexivo.id</h2>
+            <p className="text-slate-400 mt-2">
               Membawa inovasi digital dengan desain modern dan fungsional.
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="flex flex-col space-y-2 text-gray-300">
+          <div className="flex flex-col space-y-2 text-slate-400">
             <a
               href="#"
               className="hover:text-white transition-colors duration-300"
@@ -68,7 +68,7 @@ export default function Footer() {
                 href={social.link}
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-300"
+                className="p-2 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 transition-colors duration-300"
               >
                 <social.icon size={20} />
               </motion.a>
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
+        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
           <p>© {new Date().getFullYear()} rexivo.id. All rights reserved.</p>
           <p className="mt-2 md:mt-0">Made with ❤️ by Kosan Studios</p>
         </div>

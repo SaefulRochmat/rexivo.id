@@ -15,45 +15,41 @@ export default function PricingSection() {
 
 	return (
 		<div id="pricing" className="px-1 py-2">
-			<section className="py-20 bg-gradient-to-br from-red-400/50 via-green-400/30 to-blue-400/50 relative rounded-lg overflow-hidden">
+			<section className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative rounded-3xl overflow-hidden border border-slate-800/80 shadow-[0_0_80px_rgba(2,6,23,0.35)]">
 				{/* Background Decorations */}
 				<div className="absolute inset-0 overflow-hidden">
-					<div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-					<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-					<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-500"></div>
+					<div className="absolute -top-40 -right-40 w-80 h-80 bg-slate-700 rounded-full mix-blend-screen filter blur-xl opacity-20 animate-pulse"></div>
+					<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-slate-800 rounded-full mix-blend-screen filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+					<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-slate-600 rounded-full mix-blend-screen filter blur-xl opacity-10 animate-pulse delay-500"></div>
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 					{/* Header */}
 					<div className="text-center mb-16">
-						<div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full mb-6">
-							<Sparkles className="w-5 h-5 text-purple-600 mr-2" />
-							<span className="text-purple-800 font-medium text-sm">
+						<div className="inline-flex items-center px-4 py-2 bg-slate-900/90 border border-slate-700 rounded-full mb-6">
+							<Sparkles className="w-5 h-5 text-slate-300 mr-2" />
+							<span className="text-slate-200 font-medium text-sm">
 								Harga Terjangkau
 							</span>
 						</div>
 
 						<h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
-							Pilih Paket yang{" "}
-							<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-								Tepat
-							</span>{" "}
-							untuk Anda
+							Pilih Paket yang Tepat Untuk nda
 						</h2>
 
-						<p className="text-lg text-slate-100 max-w-2xl mx-auto mb-8">
+						<p className="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
 							Dapatkan website profesional dengan harga yang sesuai budget Anda.
 							Semua paket sudah termasuk hosting dan support penuh.
 						</p>
 
 						{/* Billing Toggle */}
-						<div className="flex items-center justify-center space-x-4 bg-white rounded-full p-2 shadow-lg">
+						<div className="flex items-center justify-center space-x-4 bg-slate-900/80 border border-slate-700 rounded-full p-2 shadow-lg">
 							<button
 								onClick={() => setIsAnnual(false)}
 								className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 									!isAnnual
-										? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md"
-										: "text-gray-600 hover:text-gray-900"
+											? "bg-slate-800 text-white shadow-md border border-slate-700"
+											: "text-slate-400 hover:text-slate-100"
 								}`}
 							>
 								Bulanan
@@ -62,12 +58,12 @@ export default function PricingSection() {
 								onClick={() => setIsAnnual(true)}
 								className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 relative ${
 									isAnnual
-										? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md"
-										: "text-gray-600 hover:text-gray-900"
+											? "bg-slate-800 text-white shadow-md border border-slate-700"
+											: "text-slate-400 hover:text-slate-100"
 								}`}
 							>
 								Tahunan
-								<span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">
+								<span className="absolute -top-2 -right-2 bg-slate-700 text-slate-100 text-xs px-2 py-0.5 rounded-full border border-slate-600">
 									Hemat 17%
 								</span>
 							</button>
@@ -95,20 +91,20 @@ export default function PricingSection() {
 								>
 									{plan.popular && (
 										<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-											<div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+											<div className="bg-slate-800 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg border border-slate-700">
 												🔥 Paling Populer
 											</div>
 										</div>
 									)}
 
 									<div
-										className={`relative flex flex-col bg-white rounded-2xl p-8 shadow-xl transition-all duration-500 border-2 h-full
-                    ${
-											plan.popular
-												? "border-purple-200 shadow-purple-100"
-												: "border-gray-100 hover:border-gray-200"
+										className={`relative flex flex-col bg-slate-900/95 rounded-2xl p-8 shadow-xl transition-all duration-500 border-2 h-full
+										${
+												plan.popular
+													? "border-slate-700 shadow-slate-800/70"
+													: "border-slate-800 hover:border-slate-700"
 										}
-                    ${
+										${
 											hoveredPlan === plan.id
 												? "transform scale-105 shadow-2xl"
 												: ""
@@ -117,19 +113,17 @@ export default function PricingSection() {
 										{/* Plan Header */}
 										<div className="text-center mb-8">
 											<div
-												className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${
-													plan.color
-												} mb-4 transform transition-transform duration-300 ${
+												className={`inline-flex p-4 rounded-2xl bg-slate-800 mb-4 transform transition-transform duration-300 ${
 													hoveredPlan === plan.id ? "rotate-12 scale-110" : ""
 												}`}
 											>
 												<IconComponent className="w-8 h-8 text-white" />
 											</div>
 
-											<h3 className="text-2xl font-bold text-gray-900 mb-2">
+											<h3 className="text-2xl font-bold text-slate-100 mb-2">
 												{plan.name}
 											</h3>
-											<p className="text-gray-600 text-sm">
+											<p className="text-slate-400 text-sm">
 												{plan.description}
 											</p>
 										</div>
@@ -137,17 +131,17 @@ export default function PricingSection() {
 										{/* Pricing */}
 										<div className="text-center mb-8">
 											<div className="flex items-end justify-center space-x-1">
-												<span className="text-4xl font-bold text-gray-900">
+												<span className="text-4xl font-bold text-slate-100">
 													{formatPrice(price).split(",")[0]}
 												</span>
-												<span className="text-gray-500 text-lg mb-1">
+												<span className="text-slate-500 text-lg mb-1">
 													/{isAnnual ? "tahun" : "bulan"}
 												</span>
 											</div>
 
 											{isAnnual && (
 												<div className="mt-2">
-													<span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+													<span className="inline-flex items-center px-3 py-1 bg-emerald-500/15 text-emerald-300 text-sm font-medium rounded-full border border-emerald-500/20">
 														Hemat {formatPrice(savings.savings)} (
 														{savings.percentage}%)
 													</span>
@@ -164,11 +158,11 @@ export default function PricingSection() {
 													style={{ animationDelay: `${index * 0.1}s` }}
 												>
 													<div
-														className={`flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br ${plan.color} flex items-center justify-center mt-0.5`}
+														className={`flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center mt-0.5`}
 													>
 														<Check className="w-3 h-3 text-white" />
 													</div>
-													<span className="text-gray-700 text-sm">
+													<span className="text-slate-300 text-sm">
 														{feature}
 													</span>
 												</div>
@@ -178,13 +172,12 @@ export default function PricingSection() {
 										{/* CTA Button */}
 										<div className="mt-auto">
 											<button
-												className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 group/btn
-                      ${
-								plan.popular
-									? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl"
-									: "bg-gray-900 hover:bg-black text-white"
-							}`}
-											>
+												className={`w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 flex items-center justify-center space-x-2 group/btn border
+													${
+														plan.popular
+															? "bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-xl border-slate-700"
+															: "bg-slate-800 hover:bg-slate-700 text-white border-slate-700"
+													}`}>
 												<span>{plan.buttonText}</span>
 												<ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
 											</button>

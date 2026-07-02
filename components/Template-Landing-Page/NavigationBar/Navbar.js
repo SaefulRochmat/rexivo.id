@@ -3,7 +3,7 @@
 import useToggle from "@/hooks/forComponentsTemplate/useToggleNavbar";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Image from "next/image";
 
 export default function Navbar() {
 	const { open: mobileNavOpen, setOpen: setMobileNavOpen } = useToggle(false);
@@ -18,20 +18,24 @@ export default function Navbar() {
 	];
 
 	return (
-		<header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50">
+		<header className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/70 shadow-[0_8px_30px_rgba(2,6,23,0.45)]">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
 					{/* Logo */}
 					<a href="#" className="flex items-center space-x-3 group">
 						<div className="relative">
-							<div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-								<span className="text-white font-bold text-lg">R</span>
-							</div>
+							<Image
+								src="/logos/logo-rexivo.png"
+								alt="Logo Rexivo"
+								width={40}
+								height={40}
+								className="w-10 h-10 rounded-full object-cover"
+							/>
 							<div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
 						</div>
 						<div className="hidden sm:block">
-							<h1 className="text-xl font-bold text-gray-900">rexivo.id</h1>
-							<p className="text-xs text-gray-500 -mt-0.5">web for students</p>
+							<h1 className="text-xl font-bold text-slate-100">rexivo.id</h1>
+							<p className="text-xs text-slate-400 -mt-0.5">web for students</p>
 						</div>
 					</a>
 
@@ -42,10 +46,10 @@ export default function Navbar() {
 								<a
 									key={item.name}
 									href={item.href}
-									className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900rounded-full transition-all duration-200 relative group"
+										className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-full transition-all duration-200 relative group"
 								>
 									{item.name}
-									<span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+										<span className="absolute inset-x-4 -bottom-px h-px bg-slate-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
 								</a>
 							))}
 						</div>
@@ -54,7 +58,7 @@ export default function Navbar() {
 					{/* Mobile Menu Button */}
 					<button
 						onClick={() => setMobileNavOpen((v) => !v)}
-						className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+						className="md:hidden p-2 rounded-lg hover:bg-slate-800/80 transition-colors duration-200 text-slate-200"
 						aria-label="Toggle menu"
 					>
 						<AnimatePresence mode="wait">
@@ -92,7 +96,7 @@ export default function Navbar() {
 						animate={{ opacity: 1, height: "auto" }}
 						exit={{ opacity: 0, height: 0 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
-						className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100/50"
+						className="md:hidden bg-slate-950/95 backdrop-blur-md border-t border-slate-800/70"
 					>
 						<div className="px-4 py-6 space-y-4">
 							{/* Mobile Nav Items */}
@@ -105,7 +109,7 @@ export default function Navbar() {
 										animate={{ opacity: 1, x: 0 }}
 										transition={{ delay: index * 0.1, duration: 0.2 }}
 										onClick={() => setMobileNavOpen(false)}
-										className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+										className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/70 rounded-lg transition-all duration-200 font-medium"
 									>
 										{item.name}
 									</motion.a>

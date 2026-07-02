@@ -19,7 +19,7 @@ export default function ContactSection() {
     <div id="contact" className="px-1 py-2">
       <section className="relative min-h-screen rounded-lg py-20 overflow-hidden">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
           <div className="absolute inset-0">
             {stars.map((star, i) => (
               <div
@@ -43,7 +43,7 @@ export default function ContactSection() {
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-[fadeInUp_1s_ease-out]">
               Hubungi{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-400">
                 Kami
               </span>
             </h2>
@@ -69,7 +69,7 @@ export default function ContactSection() {
                         key={index}
                         className="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 cursor-pointer"
                       >
-                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="flex-shrink-0 w-12 h-12 bg-slate-800 border border-slate-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                           <IconComponent className="w-6 h-6 text-white" />
                         </div>
                         <div>
@@ -179,7 +179,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full group relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:scale-[1.02] disabled:opacity-70"
+                    className="w-full group relative overflow-hidden bg-slate-800 hover:bg-slate-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:scale-[1.02] disabled:opacity-70 border border-slate-700"
                   >
                     <span className="relative z-10 flex items-center justify-center space-x-2">
                       {isSubmitting ? (

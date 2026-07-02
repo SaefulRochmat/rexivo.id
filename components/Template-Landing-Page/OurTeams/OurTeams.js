@@ -9,16 +9,16 @@ export default function TeamSection() {
 
   return (
     <div id="OurTeams" className="px-1 py-2">
-      <section className="max-w-full mx-auto px-4 py-16 bg-gradient-to-br from-cyan-500/40 via-blue-500/30 to-red-500/40 rounded-lg">
+      <section className="max-w-full mx-auto px-4 py-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-3xl border border-slate-800/80 shadow-[0_0_60px_rgba(2,6,23,0.25)]">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
             Meet the People Behind{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-slate-400">
               Our Success
             </span>
           </h2>
-          <p className="text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Tim profesional kami yang beragam dan penuh semangat menyatukan
             pengalaman dan pemikiran inovatif untuk memberikan hasil yang luar
             biasa bagi klien kami.

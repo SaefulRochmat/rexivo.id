@@ -13,13 +13,13 @@ import WAWidget from "../WhatsappChatWidget/WhatsappChatWidget"
 
 export default function WraperComponents() {
     return (
-      <div className="relative w-full overflow-hidden">
+      <div className="relative min-h-screen w-full overflow-hidden bg-slate-950 text-slate-100">
         <GridBeams
           gridSize={100}
-          gridColor="rgba(255, 255, 255, 0.2)"
-          rayCount={20}
-          rayOpacity={0.55}
-          raySpeed={1.5}
+          gridColor="rgba(148, 163, 184, 0.16)"
+          rayCount={14}
+          rayOpacity={0.45}
+          raySpeed={1.2}
           rayLength="80vh"
           gridFadeStart={5}
           gridFadeEnd={90}

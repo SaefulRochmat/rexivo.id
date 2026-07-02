@@ -19,14 +19,14 @@ const ProjectGallerySection = () => {
 
   return (
     <div id="Projects" className='px-1 py-2'> 
-      <div className="min-h-screen bg-gradient-to-br rounded-lg from-slate-900/50 via-purple-900/40 to-slate-900 py-12 px-4">
+      <div className="min-h-screen rounded-3xl border border-slate-800/80 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 py-12 px-4 shadow-[0_0_60px_rgba(2,6,23,0.25)]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-sky-300 to-violet-400 bg-clip-text">
               Proyek Kami
             </h1>
-            <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto">
               Temukan solusi inovatif yang kita buat dengan teknologi terkini
             </p>
           </div>
@@ -39,8 +39,8 @@ const ProjectGallerySection = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 backdrop-blur-md border transform hover:scale-105 ${
                   activeCategory === category
-                    ? "bg-white/20 text-white border-white/30 shadow-lg"
-                    : "bg-white/10 text-gray-300 border-white/20 hover:bg-white/15 hover:text-white"
+                    ? "bg-slate-800 text-white border-slate-600 shadow-lg"
+                    : "bg-slate-900/70 text-slate-300 border-slate-700 hover:bg-slate-800 hover:text-white"
                 }`}
               >
                 {category}
@@ -56,7 +56,7 @@ const ProjectGallerySection = () => {
                 className="group cursor-pointer transform transition-all duration-500 hover:scale-105"
                 onClick={() => openModal(project)}
               >
-                <div className="relative overflow-hidden rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl hover:shadow-purple-500/25 transition-all duration-500">
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-md bg-slate-900/80 border border-slate-800 shadow-2xl hover:shadow-sky-500/10 transition-all duration-500">
                   {/* Image */}
                   <div className="relative h-48 md:h-52 overflow-hidden">
                     <Image
@@ -75,7 +75,7 @@ const ProjectGallerySection = () => {
 
                     {/* Badge */}
                     <div className="absolute top-3 right-3">
-                      <span className="px-3 py-1 bg-purple-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full border border-purple-400/50">
+                      <span className="px-3 py-1 bg-sky-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full border border-sky-400/50">
                         {project.category}
                       </span>
                     </div>
@@ -83,10 +83,10 @@ const ProjectGallerySection = () => {
 
                   {/* Info */}
                   <div className="p-4 md:p-6">
-                    <h3 className="font-bold text-white text-lg md:text-xl mb-2 group-hover:text-purple-300 transition-colors duration-300">
+                    <h3 className="font-bold text-white text-lg md:text-xl mb-2 group-hover:text-sky-300 transition-colors duration-300">
                       {project.name}
                     </h3>
-                    <p className="text-gray-300 text-sm line-clamp-2 group-hover:text-gray-200 transition-colors duration-300">
+                    <p className="text-slate-400 text-sm line-clamp-2 group-hover:text-slate-300 transition-colors duration-300">
                       {project.description}
                     </p>
 
@@ -95,7 +95,7 @@ const ProjectGallerySection = () => {
                       {project.technologies.slice(0, 3).map((tech, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 bg-blue-500/20 backdrop-blur-sm text-blue-300 text-xs rounded-md border border-blue-500/30"
+                          className="px-2 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-xs rounded-md border border-sky-500/30"
                         >
                           {tech}
                         </span>
@@ -115,9 +115,9 @@ const ProjectGallerySection = () => {
           {/* Empty State */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-20">
-              <div className="text-gray-400 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl text-gray-300 font-medium mb-2">No projects found</h3>
-              <p className="text-gray-400">Try selecting a different category</p>
+              <div className="text-slate-500 text-6xl mb-4">🔍</div>
+              <h3 className="text-xl text-slate-300 font-medium mb-2">No projects found</h3>
+              <p className="text-slate-500">Try selecting a different category</p>
             </div>
           )}
         </div>
@@ -135,11 +135,11 @@ const ProjectGallerySection = () => {
 const ProjectModal = ({ project, closeModal }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl">
+      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-950/90 backdrop-blur-md border border-slate-800 rounded-3xl shadow-2xl">
         {/* Close */}
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full transition-colors duration-300 group"
+          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-slate-900/70 hover:bg-slate-800 backdrop-blur-sm rounded-full transition-colors duration-300 group border border-slate-700"
         >
           <X className="w-5 h-5 text-white group-hover:text-gray-200" />
         </button>
@@ -163,12 +163,12 @@ const ProjectModal = ({ project, closeModal }) => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">{project.name}</h2>
-                <span className="px-3 py-1 bg-purple-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-purple-400/50">
+                <span className="px-3 py-1 bg-sky-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-sky-400/50">
                   {project.category}
                 </span>
               </div>
 
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+              <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6">
                 {project.description}
               </p>
 
@@ -181,7 +181,7 @@ const ProjectModal = ({ project, closeModal }) => {
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-2 bg-blue-500/20 backdrop-blur-sm text-blue-300 text-sm rounded-lg border border-blue-500/30 font-medium"
+                      className="px-3 py-2 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-sm rounded-lg border border-sky-500/30 font-medium"
                     >
                       {tech}
                     </span>
@@ -192,17 +192,17 @@ const ProjectModal = ({ project, closeModal }) => {
 
             <div>
               <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3 text-gray-300">
-                  <User className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 text-slate-300">
+                  <User className="w-5 h-5 text-sky-400 flex-shrink-0" />
                   <div>
-                    <span className="text-sm text-gray-400">Client:</span>
+                    <span className="text-sm text-slate-500">Client:</span>
                     <p className="text-white font-medium">{project.client}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 text-gray-300">
-                  <Calendar className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 text-slate-300">
+                  <Calendar className="w-5 h-5 text-sky-400 flex-shrink-0" />
                   <div>
-                    <span className="text-sm text-gray-400">Completed:</span>
+                    <span className="text-sm text-slate-500">Completed:</span>
                     {/* ✅ sebaiknya pre-format di data, bukan di client */}
                     <p className="text-white font-medium">{project.completedDateFormatted}</p>
                   </div>
@@ -214,7 +214,7 @@ const ProjectModal = ({ project, closeModal }) => {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 to-violet-600 hover:from-sky-600 hover:to-violet-700 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-sky-500/20"
                 >
                   <ExternalLink className="w-5 h-5" />
                   View Live Demo
@@ -223,7 +223,7 @@ const ProjectModal = ({ project, closeModal }) => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-medium rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-105"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-slate-900/80 hover:bg-slate-800 backdrop-blur-sm text-white font-medium rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-300 transform hover:scale-105"
                 >
                   <Github className="w-5 h-5" />
                   View Code
