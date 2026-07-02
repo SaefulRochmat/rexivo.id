@@ -75,7 +75,7 @@ const ProjectGallerySection = () => {
 
                     {/* Badge */}
                     <div className="absolute top-3 right-3">
-                      <span className="px-3 py-1 bg-sky-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full border border-sky-400/50">
+                      <span className="px-3 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-sm rounded-lg border border-sky-500/30 font-medium">
                         {project.category}
                       </span>
                     </div>
@@ -95,13 +95,13 @@ const ProjectGallerySection = () => {
                       {project.technologies.slice(0, 3).map((tech, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-xs rounded-md border border-sky-500/30"
+                          className="px-2 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-sm rounded-lg border border-sky-500/30"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="px-2 py-1 bg-gray-500/20 backdrop-blur-sm text-gray-300 text-xs rounded-md border border-gray-500/30">
+                        <span className="px-2 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-sm rounded-lg border border-sky-500/30">
                           +{project.technologies.length - 3}
                         </span>
                       )}
@@ -163,7 +163,7 @@ const ProjectModal = ({ project, closeModal }) => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">{project.name}</h2>
-                <span className="px-3 py-1 bg-sky-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-sky-400/50">
+                <span className="px-3 py-1 bg-sky-500/15 backdrop-blur-sm text-sky-300 text-sm rounded-lg border border-sky-500/30 font-medium">
                   {project.category}
                 </span>
               </div>
@@ -193,14 +193,14 @@ const ProjectModal = ({ project, closeModal }) => {
             <div>
               <div className="space-y-4 mb-6">
                 <div className="flex items-center gap-3 text-slate-300">
-                  <User className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                  <User className="w-5 h-5 text-sky-300 flex-shrink-0" />
                   <div>
                     <span className="text-sm text-slate-500">Client:</span>
                     <p className="text-white font-medium">{project.client}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
-                  <Calendar className="w-5 h-5 text-sky-400 flex-shrink-0" />
+                  <Calendar className="w-5 h-5 text-sky-300 flex-shrink-0" />
                   <div>
                     <span className="text-sm text-slate-500">Completed:</span>
                     {/* ✅ sebaiknya pre-format di data, bukan di client */}

@@ -27,12 +27,11 @@ export default function PricingSection() {
 					{/* Header */}
 					<div className="text-center mb-16">
 						<div className="inline-flex items-center px-4 py-2 bg-slate-900/90 border border-slate-700 rounded-full mb-6">
-							<Sparkles className="w-5 h-5 text-slate-300 mr-2" />
-							<span className="text-slate-200 font-medium text-sm">
-								Harga Terjangkau
-							</span>
-						</div>
-
+						<Sparkles className="w-5 h-5 text-sky-300 mr-2" />
+						<span className="text-slate-200 font-medium text-sm">
+							Harga Terjangkau
+						</span>
+					</div>
 						<h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
 							Pilih Paket yang Tepat Untuk nda
 						</h2>
@@ -117,7 +116,7 @@ export default function PricingSection() {
 													hoveredPlan === plan.id ? "rotate-12 scale-110" : ""
 												}`}
 											>
-												<IconComponent className="w-8 h-8 text-white" />
+												<IconComponent className="w-8 h-8 text-sky-300" />
 											</div>
 
 											<h3 className="text-2xl font-bold text-slate-100 mb-2">
@@ -160,7 +159,7 @@ export default function PricingSection() {
 													<div
 														className={`flex-shrink-0 w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center mt-0.5`}
 													>
-														<Check className="w-3 h-3 text-white" />
+														<Check className="w-3 h-3 text-sky-300" />
 													</div>
 													<span className="text-slate-300 text-sm">
 														{feature}
@@ -179,7 +178,7 @@ export default function PricingSection() {
 															: "bg-slate-800 hover:bg-slate-700 text-white border-slate-700"
 													}`}>
 												<span>{plan.buttonText}</span>
-												<ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+												<ArrowRight className="w-4 h-4 text-sky-300 transition-transform duration-200 group-hover/btn:translate-x-1" />
 											</button>
 										</div>
 									</div>
