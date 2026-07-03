@@ -33,7 +33,7 @@ export default function PricingSection() {
 						</span>
 					</div>
 						<h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
-							Pilih Paket yang Tepat Untuk nda
+							Pilih Paket yang Tepat Untuk Anda
 						</h2>
 
 						<p className="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
